@@ -1,4 +1,9 @@
 /*
+Original package by Scott Pakin, available under https://github.com/spakin/disjoint.
+This fork introduces one new method to allow for re-using the same objects, in an attempt to allow an application using this data structure to reduce memory overhead
+
+Original description below:
+
 Package disjoint implements a disjoint-set data structure.
 
 A disjoint-set—also called union-find—data structure keeps track of
@@ -69,6 +74,12 @@ func (e *Element) Find() *Element {
 		e = e.parent
 	}
 	return e
+}
+
+// Reset simply rests an element to its initial state, allowing for re-use of the same set of Elements. Needs to be manually called for all relevant Element objects.
+func (e *Element) Reset() {
+	e.rank = 0
+	e.parent = e
 }
 
 // Union establishes the union of two sets when given an element from each set.
