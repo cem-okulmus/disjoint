@@ -2,8 +2,9 @@ package disjoint_test
 
 import (
 	"fmt"
-	"github.com/spakin/disjoint"
 	"math/rand"
+
+	"github.com/cem-okulmus/disjoint"
 )
 
 // Draw a maze.  This is my favorite use of disjoint-set forests.  The
