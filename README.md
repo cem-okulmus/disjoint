@@ -6,27 +6,9 @@ disjoint
 Introduction
 ------------
 
-`disjoint` is a package for the [Go programming language](http://golang.org/) that implements a [disjoint-set data structure](http://en.wikipedia.org/wiki/Disjoint-set_data_structure) (also known as a union-find data structure).  Disjoint sets are collections of unordered elements in which an element belongs to exactly one set at a time.  Sets can be merged destructively, meaning that the the original sets cease to exist once their union is taken.  And elements can be compared for belonging to the same set.  These operations run in amortized near-constant time.
+This fork introduces one new method to allow for re-using the same objects, in an attempt to allow an application using this data structure to reduce memory overhead. For details on the original package, such as how to install it, etc., we refer to the [original package](https://github.com/spakin/disjoint).
 
-Installation
-------------
-
-`disjoint` is a [Go module](https://golang.org/ref/mod) and therefore should be installed automatically from any program that imports it with
-```Go
-import "github.com/spakin/disjoint"
-```
-It can also be installed manually by issuing a
-```
-go get github.com/spakin/disjoint
-```
-command.
-
-Usage
------
-
-See the [`disjoint` API documentation](https://pkg.go.dev/github.com/spakin/disjoint) for details and examples.
-
-Author
+Author of original package
 ------
 
 [Scott Pakin](http://www.pakin.org/~scott/), *scott+disj@pakin.org*
